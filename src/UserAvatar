@@ -1,0 +1,11 @@
+import React, {Component} from 'react';
+import {Avatar} from 'antd';
+
+const UserAvatar =  (
+    <div className={styles.avatar}>
+        <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+        <span className={styles.nickname}>刘昴星</span>
+    </div>
+);
+
+export default UserAvatar;
