@@ -140,7 +140,38 @@ const htmlEscape = (text) => {
 const regText = `<p class="greeting">Hello World!</p>`;
 console.log(htmlEscape(regText));
 
+let gso = {
+    x: 1,
+    get p(){
+        return this.x;
+    },
+    set p(newvalue){
+        this.x = newvalue;
+        console.log("do something");
+    }
+};
+console.log(gso.p = 2);
 
+
+// let handle = {
+//     set(obj, prop, value){
+//         obj[prop] = value;
+//         console.log("do something");
+//     }
+// };
+//
+// let pyo = new Proxy({}, handle);
+// pyo.p = 'set value';
+
+let odo = {};
+Object.defineProperty(odo, "x", {
+    set(value){
+        console.log("do something");
+    }
+});
+
+odo.x = 4;
 
 ReactDOM.render(<App/>, document.getElementById('root'));
 registerServiceWorker();
+

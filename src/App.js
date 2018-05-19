@@ -7,7 +7,8 @@ import {BrowserRouter, Route, Link} from 'react-router-dom';
 import Home from './Home';
 import Contract from './Contract';
 import axios from 'axios';
-import {avatarmenu} from "./AvatarDropDownList";
+import {Avatarmenu} from "./AvatarDropDownList";
+import {GotoTop} from './GotoTop/GotoTop';
 
 const {SubMenu} = Menu;
 const {Header, Sider, Content} = Layout;
@@ -62,7 +63,7 @@ class App extends Component {
                         </Menu>
                         {/*<UserAvatar />*/}
 
-                        <Dropdown overlay={avatarmenu}>
+                        <Dropdown overlay={Avatarmenu}>
                             <div className={styles.avatar}>
                                 <Avatar src={this.state.avatar} />
                                 <span className={styles.nickname}>{this.state.nickname}</span>
@@ -104,6 +105,7 @@ class App extends Component {
                             </Content>
                         </Layout>
                     </Layout>
+                    <GotoTop/>
                 </Layout>
             </BrowserRouter>
         );

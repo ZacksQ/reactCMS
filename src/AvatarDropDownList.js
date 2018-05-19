@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Menu} from 'antd';
 
-export const avatarmenu = (
+export const Avatarmenu = (
     <Menu>
         <Menu.Item key="0">
             <a href="http://www.alipay.com/">首页</a>
